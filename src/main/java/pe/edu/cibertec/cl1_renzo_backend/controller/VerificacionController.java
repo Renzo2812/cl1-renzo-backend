@@ -23,7 +23,7 @@ public class VerificacionController {
         try {
             String[] datosVehiculo = verificacionService.validarVehiculo(buscarRequestDTO);
             if(datosVehiculo == null) {
-                return new BuscarResponseDTO("1", "Usuario no encontrado", "", "", "", "", "");
+                return new BuscarResponseDTO("1", "Vehiculo no encontrado", "", "", "", "", "");
             }
             return new BuscarResponseDTO("0", "", datosVehiculo[0], datosVehiculo[1], datosVehiculo[2],
                     datosVehiculo[3], datosVehiculo[4]);
